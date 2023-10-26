@@ -19,7 +19,8 @@ class PriceLevel(models.Model):
 
 class Restaurant(models.Model):
     name = models.CharField(max_length=255)
-    address = models.CharField(max_length=255)
+    description = models.TextField(null=True, blank=True)
+    address = models.CharField(max_length=255, null=True, blank=True)
     latitude = models.FloatField(null=True, blank=True)
     longitude = models.FloatField(null=True, blank=True)
     price_level = models.ForeignKey(PriceLevel, on_delete=models.PROTECT, help_text="Price level of the restaurant")
