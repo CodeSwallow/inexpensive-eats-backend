@@ -24,7 +24,7 @@ class Restaurant(models.Model):
     latitude = models.FloatField(null=True, blank=True)
     longitude = models.FloatField(null=True, blank=True)
     price_level = models.ForeignKey(PriceLevel, on_delete=models.PROTECT, help_text="Price level of the restaurant")
-    rating = models.FloatField(validators=[MinValueValidator(0), MaxValueValidator(5)])
+    rating = models.FloatField(validators=[MinValueValidator(0), MaxValueValidator(5)], null=True, blank=True)
     website = models.URLField(null=True, blank=True)
     phone_number = models.CharField(max_length=15, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
