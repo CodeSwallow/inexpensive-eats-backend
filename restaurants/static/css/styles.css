@@ -1,37 +1,57 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 .intro {
     text-align: center;
-    padding: 50px;
-    background-color: #008CBA;
+    padding: 50px 20px;
+    background-color: #343a40;
     color: white;
 }
 
 .search-bar {
+    margin: auto;
+    position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
     padding: 20px;
 }
 
-.search-bar input {
-    width: 300px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px 0 0 5px;
+.input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
 }
 
-.search-bar button {
+.search-bar label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #343a40;
+}
+
+.input-group input {
+    flex: 1;
     padding: 10px;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    background-color: #008CBA;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-group button {
+    background-color: #343a40;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .restaurant-list {
@@ -39,17 +59,19 @@ body {
 }
 
 .restaurant-list h2 {
-    color: #333;
+    color: #343a40;
+    margin-bottom: 10px;
 }
 
 .restaurant-list ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .restaurant-list li {
     background-color: #fff;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
 }
