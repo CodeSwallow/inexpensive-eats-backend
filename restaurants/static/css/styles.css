@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.intro {
+    text-align: center;
+    padding: 50px;
+    background-color: #008CBA;
+    color: white;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #008CBA;
+    color: white;
+    cursor: pointer;
+}
+
+.restaurant-list {
+    padding: 20px;
+}
+
+.restaurant-list h2 {
+    color: #333;
+}
+
+.restaurant-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.restaurant-list li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}

@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base_generic.html' %}
+
+{% block content %}
+    <div class="intro">
+        <h1>Welcome to Our Restaurant Finder</h1>
+        <p>Find the best restaurants in town, read reviews, and explore new cuisines.</p>
+    </div>
+
+    <div class="search-bar">
+        <label for="restaurant-search">Search for restaurants:</label>
+        <input type="text" id="restaurant-search" placeholder="Enter restaurant name..." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+
+    <div class="restaurant-list">
+        <h2>Newest Restaurants</h2>
+        <ul>
+            {% for restaurant in newest_restaurants %}
+                <li>{{ restaurant.name }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Popular Restaurants</h2>
+        <ul>
+            {% for restaurant in popular_restaurants %}
+                <li>{{ restaurant.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
